@@ -8,5 +8,7 @@ public interface PersonService {
 
     ArrayList<Person> getAllPersons();
     Person savePerson(Person p);
+    Boolean leap (Integer birth);
+
 
 }

@@ -34,9 +34,6 @@ public class ApiDemo {
 
     @GetMapping("/leap/{birth}")
     public Boolean leap(@PathVariable Integer birth){
-        if (calendar.isLeapYear(birth))
-            return true;
-        else
-            return false;
+        return personService.leap(birth);
     }
 }
