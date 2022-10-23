@@ -5,6 +5,7 @@ import com.demo.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
 
@@ -23,7 +24,7 @@ public class ApiDemo {
     }
 
     @PostMapping("/save")
-    public Person savePerson(@RequestBody Person p){
+    public Person savePerson(@Valid @RequestBody Person p){
         return personService.savePerson(p);
     }
 
